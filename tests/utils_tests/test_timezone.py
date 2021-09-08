@@ -26,9 +26,9 @@ if not HAS_PYTZ:
     CET = None
     PARIS_IMPLS = (PARIS_ZI,)
 
-    needs_pytx = unittest.skip("Test requires pytz")
+    needs_pytx = unittest.skip('Test requires pytz')
 else:
-    CET = pytz.timezone("Europe/Paris")
+    CET = pytz.timezone('Europe/Paris')
     PARIS_IMPLS = (PARIS_ZI, CET)
 
     def needs_pytx(f):
